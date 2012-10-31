@@ -6,36 +6,36 @@ def reverser(word)
         output << word.split[i].reverse << " "
         i+=1
    end
-  puts  output
+   yield output
 end
 
 def add(number)
-  puts number+5  
+   yield number+5  
 end
 
 def repeator(rep)
     i=0
     puts "Repeat bloct #{rep} times"
     while i<rep
-      puts "block \n"
+      yield puts "block"
       i+=1
     end
     puts "End of repeat"
 end
 # revers text
 str="hello"
-reverser(str){puts "#{str}"} 
+reverser(str){|y| puts y} 
 str="hello dolly"
-reverser(str){puts "#{str}"} 
+reverser(str){|y| puts y} 
 
 # blocks for add number
 numb=1
-add(numb){puts "#{numb}"}
+add(numb){|y| puts y}
 numb=3
-add(numb){puts "#{numb}"}
+add(numb){|y| puts y}
 
 # trepaet block 
 count=3
-repeator(count) {puts "#{count}"}
+repeator(count) {|y| puts y}
 count=10
-repeator(count) {puts "#{count}"}
+repeator(count) {|y| puts y}
