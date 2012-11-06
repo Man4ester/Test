@@ -1,4 +1,0 @@
-def ftoc(a)
-  return (5.0/9.0)*(a-32)
-end
-
