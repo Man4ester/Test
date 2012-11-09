@@ -1,18 +1,23 @@
 def echo(word)
 	"#{word}"
 end
+
 def shout(word)
 	word=word.upcase
 end
+
 def repeat (word,n=2)
 	"#{word} "*n
 end
+
 def start_of_word(word,n)
 	word[0,n]
 end
+
 def first_word(word)
 	word.split[0]
 end
+
 def titleize(word)
 	word_count = word.split.length
 	i=0
